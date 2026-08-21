@@ -1,0 +1,86 @@
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  padding: var(--sp-2);
+  height: var(--header-h);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-sm);
+  background: var(--navy);
+  color: #fff;
+}
+.brandName { font-weight: var(--fw-bold); color: var(--text-strong); font-size: var(--fs-h3); letter-spacing: -0.2px; }
+.brandSub { font-size: var(--fs-tiny); color: var(--text-faint); }
+
+.nav { flex: 1; overflow-y: auto; padding: var(--sp-2) var(--sp-1); }
+.group { margin-bottom: var(--sp-2); }
+.groupLabel {
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  padding: 0 var(--sp-1) 6px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px var(--sp-1);
+  border-radius: var(--r-sm);
+  color: var(--text-muted);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-body);
+  text-decoration: none;
+  margin-bottom: 2px;
+}
+.item:hover { background: var(--surface-2); color: var(--text-strong); text-decoration: none; }
+.active { background: var(--blue-softer); color: var(--blue-strong); font-weight: var(--fw-semibold); }
+.active:hover { background: var(--blue-softer); }
+.count {
+  margin-left: auto;
+  background: var(--risk-high);
+  color: #fff;
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-bold);
+  min-width: 18px;
+  height: 18px;
+  border-radius: var(--r-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.footer { padding: var(--sp-1) var(--sp-2) var(--sp-2); }
+.modelChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-tiny);
+  color: var(--text-muted);
+  background: var(--ai-tint);
+  border-radius: var(--r-pill);
+  padding: 5px 10px;
+  font-weight: var(--fw-semibold);
+}
+.modelChip svg { color: var(--ai-gold-1); }

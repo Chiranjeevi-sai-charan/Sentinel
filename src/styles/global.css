@@ -1,0 +1,87 @@
+/* ============================================================
+   Sentinel — Global base styles
+   ============================================================ */
+
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text);
+  background: linear-gradient(160deg, var(--canvas-from) 0%, var(--canvas-to) 45%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-strong);
+  line-height: var(--lh-tight);
+  font-weight: var(--fw-semibold);
+}
+
+h1 { font-size: var(--fs-h1); font-weight: var(--fw-bold); letter-spacing: var(--ls-tight); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+a {
+  color: var(--blue-strong);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: var(--fs-body);
+  color: var(--text);
+}
+
+/* Numbers that should read as tabular (tables, metrics) */
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* Slim, unobtrusive scrollbars */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--r-pill);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover { background: #B7C2D4; background-clip: content-box; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

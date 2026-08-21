@@ -1,0 +1,113 @@
+/* ============================================================
+   Sentinel — Design Tokens
+   Light, Candescent-matched fintech aesthetic.
+   Everything visual references these variables — no hardcoded
+   colors/spacing in component CSS. This is the "design system"
+   layer of the case study.
+   ============================================================ */
+
+:root {
+  /* ---- Brand ---------------------------------------------- */
+  --navy-ink: #0B2545;      /* headings, primary text */
+  --navy: #12294A;          /* solid primary buttons, deep accents */
+  --navy-600: #1B3A63;
+  --blue: #2563EB;          /* data, links, active nav, highlights */
+  --blue-strong: #1D4ED8;
+  --blue-soft: #DBE7FB;     /* tinted fills, chips */
+  --blue-softer: #EEF4FE;
+
+  /* ---- AI accent (the signature Candescent motif) --------- */
+  --ai-gold-1: #F5C24B;
+  --ai-gold-2: #F7D774;
+  --ai-gradient: linear-gradient(135deg, #F5C24B 0%, #F7D774 100%);
+  --ai-tint: #FEF6E1;       /* soft yellow callout background */
+  --ai-border: #F1D08A;
+
+  /* ---- Risk / status -------------------------------------- */
+  --risk-low: #10B981;      /* green  1-30 */
+  --risk-low-tint: #E4F7EF;
+  --risk-med: #F59E0B;      /* amber  31-70 */
+  --risk-med-tint: #FDF0DA;
+  --risk-high: #EF4444;     /* red    71-100 */
+  --risk-high-tint: #FDE6E6;
+
+  --status-info: #2563EB;
+  --status-info-tint: #DBE7FB;
+  --status-neutral: #5B6B84;
+  --status-neutral-tint: #EAEEF4;
+
+  /* ---- Surfaces & text ------------------------------------ */
+  --canvas-from: #EAF1FB;
+  --canvas-to: #F7FAFF;
+  --surface: #FFFFFF;
+  --surface-2: #F7FAFF;     /* subtle zebra / hover fill */
+  --sidebar-bg: #FFFFFF;
+
+  --text-strong: #0B2545;
+  --text: #23324A;
+  --text-muted: #5B6B84;
+  --text-faint: #8A97AB;
+  --on-accent: #FFFFFF;
+
+  --border: #E5EAF2;
+  --border-strong: #D3DBE8;
+
+  /* ---- Typography ----------------------------------------- */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system,
+    "Helvetica Neue", Arial, sans-serif;
+
+  --fs-display: 44px;   /* hero metric numbers */
+  --fs-h1: 28px;
+  --fs-h2: 20px;
+  --fs-h3: 16px;
+  --fs-body: 14px;
+  --fs-small: 12px;
+  --fs-tiny: 11px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-heavy: 800;
+
+  --lh-tight: 1.2;
+  --lh-body: 1.5;
+  --ls-tight: -0.5px;
+
+  /* ---- Spacing (8px grid) --------------------------------- */
+  --sp-0: 4px;
+  --sp-1: 8px;
+  --sp-2: 16px;
+  --sp-3: 24px;
+  --sp-4: 32px;
+  --sp-5: 40px;
+  --sp-6: 56px;
+
+  /* ---- Radius --------------------------------------------- */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* ---- Elevation ------------------------------------------ */
+  --shadow-sm: 0 1px 3px rgba(18, 41, 74, 0.06);
+  --shadow-md: 0 2px 8px rgba(18, 41, 74, 0.06);
+  --shadow-lg: 0 8px 28px rgba(18, 41, 74, 0.12);
+  --shadow-panel: -12px 0 32px rgba(18, 41, 74, 0.12);
+
+  /* ---- Layout dims ---------------------------------------- */
+  --sidebar-w: 240px;
+  --header-h: 64px;
+  --activity-w: 300px;
+  --panel-w: 460px;
+
+  /* ---- Motion --------------------------------------------- */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+  --dur-slow: 320ms;
+
+  --z-panel: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}

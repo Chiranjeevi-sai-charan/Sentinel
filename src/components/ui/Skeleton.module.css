@@ -1,0 +1,17 @@
+.sk {
+  display: block;
+  background: linear-gradient(
+    100deg,
+    var(--surface-2) 30%,
+    #eef2f8 50%,
+    var(--surface-2) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.3s infinite linear;
+}
+.stack { display: flex; flex-direction: column; gap: 8px; }
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}

@@ -1,0 +1,36 @@
+.list { display: flex; flex-direction: column; gap: var(--sp-2); }
+.case { cursor: pointer; transition: box-shadow var(--dur-fast); }
+.case:hover { box-shadow: var(--shadow-lg); }
+
+.caseTop { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-2); }
+.caseWho { display: flex; align-items: center; gap: var(--sp-1); }
+.caseName { font-weight: var(--fw-semibold); color: var(--text-strong); }
+.caseSub { font-size: var(--fs-small); color: var(--text-muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+.caseConfidence {
+  display: flex; align-items: center; gap: 6px;
+  font-size: var(--fs-small); font-weight: var(--fw-semibold); color: #6b4c00;
+  background: var(--ai-tint);
+  padding: 5px 10px; border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+
+.note {
+  background: var(--surface-2);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+  margin: var(--sp-2) 0;
+  font-size: var(--fs-small);
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.5;
+}
+.noteFrom { display: block; font-style: normal; font-size: var(--fs-tiny); font-weight: var(--fw-bold); color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 4px; }
+
+.caseActions { display: flex; align-items: center; gap: 8px; }
+.viewLink {
+  margin-left: auto;
+  display: inline-flex; align-items: center; gap: 4px;
+  border: none; background: none; color: var(--blue-strong);
+  font-size: var(--fs-small); font-weight: var(--fw-semibold);
+}

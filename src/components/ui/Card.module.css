@@ -1,0 +1,35 @@
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: var(--sp-2);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* The signature colored top-accent bar. */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+.accent-blue::before  { background: var(--blue); }
+.accent-red::before   { background: var(--risk-high); }
+.accent-green::before { background: var(--risk-low); }
+.accent-amber::before { background: var(--risk-med); }
+.accent-ai::before    { background: var(--ai-gradient); }
+.accent-none::before  { display: none; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-2);
+}
+.headTitle { display: flex; align-items: center; gap: 8px; flex: 1; }
+.headIcon { color: var(--text-muted); }
+.meta { font-size: var(--fs-small); color: var(--text-muted); font-weight: var(--fw-medium); }

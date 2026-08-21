@@ -1,0 +1,10 @@
+.glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--ai-gradient);
+  color: #6b4c00;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(245, 194, 75, 0.4);
+}

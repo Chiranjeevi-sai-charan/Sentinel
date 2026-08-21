@@ -1,0 +1,60 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--sp-2);
+}
+.metric { display: flex; flex-direction: column; }
+.dim { opacity: 0.55; filter: grayscale(0.3); }
+
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+.label { font-size: var(--fs-small); color: var(--text-muted); font-weight: var(--fw-semibold); }
+.icon { color: var(--text-faint); }
+.value {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-semibold);
+  color: var(--text-strong);
+  letter-spacing: -0.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.sub { font-size: var(--fs-tiny); color: var(--text-muted); margin-top: 6px; }
+.badgeSub { display: inline-flex; align-items: center; gap: 6px; }
+
+.perf { grid-column: span 1; display: flex; flex-direction: column; }
+.perfTable { flex: 1; }
+.perfHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-1);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--fs-tiny);
+  color: var(--text-faint);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+}
+.perfList { display: flex; flex-direction: column; gap: 8px; }
+.perfRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-1);
+  align-items: center;
+  font-size: var(--fs-small);
+  padding: 8px 0;
+}
+.perfRow:not(:last-child) { border-bottom: 1px solid var(--border); }
+.perfName { color: var(--text); font-weight: var(--fw-medium); }
+.perfStat { color: var(--text-muted); font-variant-numeric: tabular-nums; text-align: right; }
+.viewAll {
+  border: none;
+  background: none;
+  color: var(--blue-strong);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 8px;
+}
