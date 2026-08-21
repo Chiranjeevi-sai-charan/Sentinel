@@ -130,3 +130,14 @@
 .approve:hover:not(:disabled) { background: var(--risk-low-tint); color: #0a7a56; border-color: var(--risk-low); }
 .hold:hover:not(:disabled) { background: var(--risk-med-tint); color: #a76a08; border-color: var(--risk-med); }
 .escalate:hover:not(:disabled) { background: var(--status-info-tint); color: var(--blue-strong); border-color: var(--blue); }
+
+/* ---- Responsive ---- */
+/* Below the layout's comfortable width, let the table scroll sideways
+   instead of crushing columns. The rounded border stays intact. */
+@media (max-width: 900px) {
+  .tableWrap { overflow-x: auto; overflow-y: hidden; }
+  .table { min-width: 680px; }
+}
+@media (max-width: 620px) {
+  .toolbar { flex-wrap: wrap; }
+}

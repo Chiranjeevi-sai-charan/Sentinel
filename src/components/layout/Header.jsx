@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { SlidersHorizontal, Bell } from "lucide-react";
+import { SlidersHorizontal, Bell, Menu } from "lucide-react";
 import { useSession } from "../../context/SessionContext";
 import RoleSwitcher from "./RoleSwitcher";
 import styles from "./Header.module.css";
@@ -16,7 +16,7 @@ const TITLES = {
   "/insights": { title: "AI insights", sub: "Model performance and trending fraud patterns" },
 };
 
-export default function Header() {
+export default function Header({ onMenuToggle }) {
   const { pathname } = useLocation();
   const { user, roleId, health, toggleScoring, toggleAiModel } = useSession();
   const [demoOpen, setDemoOpen] = useState(false);
@@ -24,9 +24,19 @@ export default function Header() {
 
   return (
     <header className={styles.header}>
-      <div className={styles.titleBlock}>
-        <h1>{meta.title}</h1>
-        {meta.sub && <p className={styles.sub}>{meta.sub}</p>}
+      <div className={styles.titleWrap}>
+        <button
+          className={styles.menuBtn}
+          onClick={onMenuToggle}
+          title="Menu"
+          aria-label="Open navigation menu"
+        >
+          <Menu size={20} />
+        </button>
+        <div className={styles.titleBlock}>
+          <h1>{meta.title}</h1>
+          {meta.sub && <p className={styles.sub}>{meta.sub}</p>}
+        </div>
       </div>
 
       <div className={styles.right}>
@@ -61,7 +71,7 @@ export default function Header() {
           )}
         </div>
 
-        <button className={styles.iconBtn} title="Notifications"><Bell size={18} /></button>
+        <button className={`${styles.iconBtn} ${styles.bell}`} title="Notifications"><Bell size={18} /></button>
 
         <div className={styles.user}>
           <span className={styles.avatar}>{user.initials}</span>

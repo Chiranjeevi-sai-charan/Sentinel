@@ -9,6 +9,11 @@
   top: var(--header-h);
   overflow-y: auto;
 }
+
+/* The live-activity rail is supplementary; hide it once space is tight. */
+@media (max-width: 1200px) {
+  .rail { display: none; }
+}
 .head { display: flex; align-items: center; gap: 8px; margin-bottom: var(--sp-2); }
 .head h3 { font-size: var(--fs-h3); }
 .pulse {
